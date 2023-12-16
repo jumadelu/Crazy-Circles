@@ -8,17 +8,25 @@ canvas.height = window.innerHeight;
 let ctx = canvas.getContext('2d');
 
 
-function circle() {
+let posX = 50;
+let posY = 50;
+let radius = 30;
+let innerColor = "Red";
+
+
+function drawCircle(posX, posY, radius, innerColor) {
     ctx.beginPath();
-    ctx.arc(150, 150, 30, 0, Math.PI * 2, false);
-    ctx.strokeStyle = "Red";
+    ctx.arc(posX, posY, radius, 0, Math.PI * 2, false)
+    ctx.strokeStyle = innerColor;
     ctx.stroke();
 }
 
 
 function draw() {
+    window.requestAnimationFrame(draw);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    circle();
+    drawCircle(posX, posY, radius, innerColor);
+    posX += 5;
 }
 
 draw();
