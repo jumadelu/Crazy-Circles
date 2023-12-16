@@ -1,7 +1,21 @@
+/* style.css */
 
-#circleField {
-    width: 90%;
-    height: auto;
-    background-color: cadetblue;
+html, body {
+    height: 100%;
 }
+
+  
+body {
+    margin: 0;
+    display: flex;
+  
+    /* This centers body horizontally. */
+    justify-content: center;
+  
+    /* This centers body vertically. */
+    align-items: center;
+}
+
+
+
 
